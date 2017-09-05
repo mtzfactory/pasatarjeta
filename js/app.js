@@ -131,7 +131,10 @@ function flipCard(card) {
 		var start = new Date();
 		chronometer(start);
 	}
-	if (card.id !== 'resultados') playing = true;
+	if (card.id !== 'resultados') { 
+		$('#resultados').classList.remove('hover');
+		playing = true;
+	}
 }
 
 function clearWall() {
