@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<title>Pasatarjeta (·.·)</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nova+Mono">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/flip.css">
+</head>
+<body>
+	<div class="landing">
+		<div id="intro" class="content">
+			<h1>Bienvenido al juego de <a href="http://www.telecinco.es/pasapalabra/" target="_blank">Pasatarjeta</a>.</h1>
+			<div class="centerme">
+				<button id="empezar" class="gradient" onclick="showUserDiv()">Empezar a jugar</button>
+				<div id="user" class="hideme">
+					<label for="username">Nombre del jugador:</label>
+					<input type="text" placeholder="palabreitor" id="username" autofocus>
+					<button id="vamos" class="gradient" onclick="getUserName()">Vamos!</button>
+				</div>
+			</div>
+		</div>
+		<div id="bienvenido" class="content hideme"></div>
+	</div>
+	<div id="pasapalabra" class="pasapalabra hideme">
+		<div class="header">
+			<p>
+				<i class="orange noitalic">&raquo;&nbsp;tip</i>&nbsp;:&nbsp;Puedes pulsar sobre cualquier tarjeta e intentar adivinar la palabra. Corre, porque el tiempo cuenta desde la primera tarjeta que giras !
+			</p>
+			<div class="vcenter">
+				<button class="gradient" onclick="newGame()">Nueva partida</button>
+			</div>
+		</div>
+		<div id="cards" class="cards">
+			<div id="resultados" class="flip-container" onclick="flipCard(this)">
+				<div class="flipper">
+					<div class="front">
+						<div class="puntuacion">
+							<span id="jugador">jugador</span>
+							<hr>
+							<span class="centerme">- Acertadas -</span>
+							<span id="acertadas" class="centerme">00</span>
+							<span class="centerme">- Falladas -</span>
+							<span id="falladas" class="centerme">00</span>
+							<span class="centerme">- Tiempo -</span>
+							<span id="crono">0:00:00</span>
+						</div>
+					</div>
+					<div class="back">
+						<div style="font-weight: bold; text-align: center; margin: 10px;">
+							<span class="orange">muro de la fama</span>
+						</div>
+						<hr>
+						<div id="muro" class="table">
+							<div id="cabecera" class="trow">
+								<div class="thead orangine">nombre</div>
+								<div class="thead orangine">&nbsp;+&nbsp;</div>
+								<div class="thead orangine">&nbsp;-&nbsp;</div>
+								<div class="thead orangine">&nbsp;t (s)&nbsp;</div>
+							</div>
+						</div>
+						<div class="downme">
+							<a id="reset" class="nohref" style="right: 15px;" onclick="resetWall.apply(this, arguments)">reset</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>hecho con&nbsp;<i class="fa fa-heart red" aria-hidden="true"></i>&nbsp;por <a href="mailto:ricardo.martinez.monje@gmail.com">Ricardo Martínez</a></p>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>

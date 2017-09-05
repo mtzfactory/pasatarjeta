@@ -1,0 +1,68 @@
+.cards {
+	/*display: table;
+	border-collapse: separate;
+	border-spacing: 10px;*/
+	/*display: block;*/
+	top: 0;
+	margin: 0 auto;
+}
+.card {
+	display: inline-block;
+	/*display: table-cell;
+	padding: 5px;*/
+	position: relative;
+	float: left;
+	margin: 10px;
+	/*margin-right: 10px;
+	margin-top: 10px;*/
+	width: 150px;
+	height: 200px;
+
+	border-radius: 10px;
+	background: #fff;
+	-webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+.card-crop {
+	/*width: 170px;
+	height: 200px;
+	overflow: hidden;*/
+}
+.card-row { display: table-row; }
+.card p {
+	text-align: center;
+	text-transform: uppercase;
+	font: 100px/200px 'Quicksand', sans-serif;
+	font-weight: bold;
+	margin: 0px;
+}
+.suitvocals:before, .suitvocals:after {
+	content: "v";
+	color: #ff0000;
+}
+.suitconsonants:before, .suitconsonants:after {
+	content: "c";
+	color: #000;
+}
+div[class*='suit']:before {
+	position: absolute; /*relative;*/ /* absolute; */
+	font-size: 25px;
+	top: 5px;
+	left: 10px;
+}
+div[class*='suit']:after {
+	position: absolute; /*relative;*/ /* absolute; */
+	font-size: 25px;
+	/*left: -5px;
+	float: right;*/
+	bottom: 5px;
+	right: 10px;
+}
+/*
+https://www.w3schools.com/css/css3_images.asp
+https://www.w3schools.com/howto/howto_css_cards.asp
+https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block
+
+https://designshack.net/articles/css/css-card-tricks/
+http://bashooka.com/coding/cool-css-card-ui-examples/
+*/

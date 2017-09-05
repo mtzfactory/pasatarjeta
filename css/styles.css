@@ -1,0 +1,190 @@
+* { font-family: 'Quicksand', sans-serif; }
+html { text-rendering: optimizeLegibility; }
+body {
+	color: white;
+	background: #0fa798; /* #06beb6 fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #06beb6, #48b1bf); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #06beb6, #48b1bf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin: 0px;
+}
+/* http://www.tipue.com/blog/center-a-div/ */
+.landing {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh; width: 100vw;
+}
+.content {
+	background-color: #f2c02b;
+	border-radius: 3px;
+	padding: 30px;
+}
+.pasapalabra {
+	position: absolute;
+	top: 0;
+}
+.cards {
+	text-align: center;
+}
+.puntuacion {
+	display: grid;
+	margin: 6px 10px 0px 10px;
+}
+.vcenter {
+	display: -webkit-inline-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;	
+}
+.centerme {
+	text-align: center;
+}
+.downme {
+	width: 100%;
+}
+.downme > * {
+	position: absolute;
+	bottom: 3px;
+}
+.showme { display: block; }
+.hideme { display: none; }
+a {
+	font-style: normal;
+	color: white;
+	text-decoration: none;
+}
+a:hover { color: #f3764a; }
+label, input {
+	font-size: 18px;
+}
+input {
+	color: white;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid #F761A1;
+	margin: 10px;
+	width: 120px;
+	text-align: center;
+}
+*::-webkit-input-placeholder { color: #909; } /* WebKit, Blink, Edge */
+*:-moz-placeholder { color: #909; opacity: 1; } /* Mozilla Firefox 4 to 18 */
+*::-moz-placeholder { color: #909; opacity: 1; } /* Mozilla Firefox 19+ */
+*:-ms-input-placeholder { color: #909; } /* Internet Explorer 10-11 */
+*::-ms-input-placeholder { color: #909; } /* Microsoft Edge */ 
+button {
+	display: inline-block;
+	margin: 4px 2px;
+	padding: 10px 32px;
+	font-size: 16px;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+button:focus {
+	outline: 0 !important
+}
+button:active, a:active {
+	box-shadow: inset 0px 0px 0px 3px red;
+}
+button:hover {
+	box-shadow: inset 0px 0px 0px 3px #f7f7f7;
+}
+.gradient {
+	border-radius: 30px;
+	background-image: linear-gradient(135deg, #F761A1 10%, #8C1BAB 100%);
+}
+.table{
+	display: table;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 3px 2px;
+}
+.thead {
+	font-weight: bold;
+}
+.trow {
+	display: table-row;
+}
+.tcell, .thead {
+	display: table-cell;
+	font-size: 11px;
+	text-align: center;
+	color: #9A909E;
+	/*border: 1px solid white;*/
+}
+#acertadas, #falladas, #crono {
+	font-family: 'Nova Mono', monospace;
+	font-size: 42px;
+	line-height: 42px;
+	margin: 0 auto;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.reverse {
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.reverse > p {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.reverse > span {
+	display: block;
+	text-align: justify;
+	width: 100%;
+}
+.resp {
+	color: #f2c02b;
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+.right {
+	-webkit-box-shadow: inset 0px 0px 0px 5px #6fff58 !important;
+	-moz-box-shadow: inset 0px 0px 0px 5px #6fff58 !important;
+	box-shadow: inset 0px 0px 0px 5px #6fff58 !important;
+}
+.failed {
+	-webkit-box-shadow: inset 0px 0px 0px 5px #FF4100 !important;
+	-moz-box-shadow: inset 0px 0px 0px 5px #FF4100 !important;
+	box-shadow: inset 0px 0px 0px 5px #FF4100 !important;
+}
+.fitme-42 {	/* para 'input' element */
+	width: calc(100% - 42px); /* 2*10px div margin + 2*10px input margin + 2*1px input padding */
+}
+.fitme-20 {	/* pata 'p' element */
+	width: calc(100% - 20px);
+}
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	right: 0px;
+	text-align: right;
+	background-color: transparent;
+}
+.footer p {
+	font-size: 11px;
+	margin-top: 0 px;
+	margin-bottom: 1px;
+	padding-right: 4px;
+}
+.red { color: #BC0213; }
+.orange { color: #f2c02b; }
+.orangine { color: #f3764a; }
+.grey { color: #9A909E; }
+i.noitalic { font-style: normal; }
+hr { width: 100%; height: 1px; margin-bottom: 4px; border: 0; background: #F761A1; }
+/* theme backgroud: https://codepen.io/CKH4/pen/qdxEgm; */
