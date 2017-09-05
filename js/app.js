@@ -47,7 +47,7 @@ window.onload = function() {
 	}, 'json/questions.json');
 }
 
-window.onbeforeunload = function() { return saveWall(); }
+window.onbeforeunload = function() { return saveWall(false); }
 
 function loadJSON(callback, file) {   
 	var xobj = new XMLHttpRequest();
@@ -118,8 +118,10 @@ function getUserName() {
 			$('#bienvenido').classList.toggle('hideme');
 			startGame();
 		}, 1200);
+		/*
 		walloffame.push( { user: username, elapsed: 0, right: 0, failed: 0, date: new Date() } );
 		localStorage['mtz.pasatarjeta.walloffame'] = JSON.stringify(walloffame);
+		*/
 	}
 }
 
@@ -132,8 +134,15 @@ function flipCard(card) {
 	if (card.id !== 'resultados') playing = true;
 }
 
+function clearWall() {
+	var cabecera = $('#cabecera').cloneNode(true);
+	$('#muro').innerHTML = '';
+	$('#muro').appendChild(cabecera);
+}
+
 function buildWall() {
 	if (walloffame.length > 0) {
+		clearWall();
 		var row = '<div class="trow">fila</div>';
 		var c1 = '<div class="tcell">usuario</div>';
 		var c2 = '<div class="tcell">acertadas</div>';
@@ -152,9 +161,9 @@ function buildWall() {
 	}
 }
 
-function saveWall() {
-	if (chrono > 0 || acertadas > 0 || falladas > 0) {
-		if (walloffame.length > 0) {
+function saveWall(rebuildWall) {
+	if (chrono > 0 && acertadas + falladas === questions.length) {
+		if (walloffame.length > 0 && walloffame[walloffame.length - 1].user === username) {
 			walloffame[walloffame.length - 1].elapsed = chrono;
 			walloffame[walloffame.length - 1].right = acertadas;
 			walloffame[walloffame.length - 1].failed = falladas;
@@ -162,14 +171,9 @@ function saveWall() {
 		else walloffame.push( { user: username, elapsed: chrono, right: acertadas, failed: falladas, date: new Date() } );
 		localStorage['mtz.pasatarjeta.walloffame'] = JSON.stringify(walloffame);
 	}
+	if (rebuildWall) buildWall();;
 	//return "Estas seguro que quieres cerrar la ventana?";
 	return null;
-}
-
-function clearWall() {
-	var cabecera = $('#cabecera').cloneNode(true);
-	$('#muro').innerHTML = '';
-	$('#muro').appendChild(cabecera);
 }
 
 function resetWall(e) {
@@ -203,16 +207,14 @@ function newGame() {
 	$('#intro').classList.toggle('hideme');
 	$('#user').classList.remove('hideme');
 
+	playing = false;
+	saveWall(true);
 	clearInterval(chronoId);
+	chrono = 0;
 	$('#crono').textContent = '0:00:00';
 	$('#acertadas').textContent = '00';
 	$('#falladas').textContent = '00';
 	$('#resultados').classList.remove('hover');
-
-	saveWall();
-	clearWall();
-	buildWall();
-	chrono = 0;
 
 	var results = $('#resultados').cloneNode(true);
 	$('#cards').innerHTML = '';
@@ -242,7 +244,10 @@ function checkResponse(e) {
 		$('#resp-' + e.target.id).innerHTML = '<p class="resp centerme fitme-20">' + questions[idx].answer.toCapitalLetter() + '</p>'
 		$('#acertadas').textContent = acertadas;
 		$('#falladas').textContent = falladas;
-		if (acertadas + falladas === questions.length) clearInterval(chronoId);
+		if (acertadas + falladas === questions.length) {
+			clearInterval(chronoId);
+			saveWall(true);
+		}
 	}
 }
 
