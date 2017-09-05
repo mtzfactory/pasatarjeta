@@ -6,5 +6,5 @@ Como reto final, nos pidieron crear el juego de **Pasapalabra** usando sólo HTM
 
 Quieres jugar? puedes comprobar lo listo que eres en el siguiente enlace:
 
-<a href="https://mtzfactory.github.io/pasapalabra/" target="_blank">https://mtzfactory.github.io/pasapalabra/</a>
+<a href="https://mtzfactory.github.io/pasatarjeta/" target="_blank">https://mtzfactory.github.io/pasatarjeta/</a>
 
