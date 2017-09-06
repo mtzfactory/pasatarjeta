@@ -10,7 +10,7 @@ var questions = [];
 // querySelector, jQuery style: $('.className');
 var $ = function (selector) {
 	return document.querySelector(selector);
-};
+}
 
 String.prototype.toCapitalLetter = function() {
 	return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
