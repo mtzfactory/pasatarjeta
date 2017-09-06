@@ -133,6 +133,7 @@ function flipCard(card) {
 	}
 	if (card.id !== 'resultados') { 
 		$('#resultados').classList.remove('hover');
+		$('#' + card.id.slice(-1)).focus();
 		playing = true;
 	}
 }
