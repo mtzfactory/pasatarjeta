@@ -151,6 +151,11 @@ button:hover {
 	margin-bottom: 16px;
 	margin-top: 16px;
 }
+@media screen and (max-width: 500px){
+	.resp {
+		font-size: 22px;
+	}
+}
 .right {
 	-webkit-box-shadow: inset 0px 0px 0px 5px #6fff58 !important;
 	-moz-box-shadow: inset 0px 0px 0px 5px #6fff58 !important;

@@ -213,7 +213,7 @@ function newGame() {
 	playing = false;
 	saveWall(true);
 	clearInterval(chronoId);
-	chrono = 0;
+	chrono = 0; acertadas = 0; falladas = 0;
 	$('#crono').textContent = '0:00:00';
 	$('#acertadas').textContent = '00';
 	$('#falladas').textContent = '00';
