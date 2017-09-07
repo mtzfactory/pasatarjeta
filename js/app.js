@@ -16,7 +16,26 @@ String.prototype.toCapitalLetter = function() {
 	return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
 }
 
+function toggleFullScreen() {
+	var doc = window.document;
+	var docEl = doc.documentElement;
+
+	var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+	var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+	if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+		requestFullScreen.call(docEl);
+	}
+	else {
+		cancelFullScreen.call(doc);
+	}
+}
+
 window.onload = function() {
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		toggleFullScreen();
+	}
+
 	$('#username').addEventListener('keyup', event => {
 		if (event.keyCode !== 13) return;
 		$('#vamos').click();
