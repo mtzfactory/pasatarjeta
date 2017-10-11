@@ -3,10 +3,9 @@
 ![html-5](https://mtzfactory.github.io/logos/png/html-5.png)
 ![css-3](https://mtzfactory.github.io/logos/png/css-3.png)
 
-# [Pasatarjeta.](https://mtzfactory.github.io/pasatarjeta/)
-## Proyecto final del pre-curso.
+## Pasatarjeta.
 
-Como reto final, nos pidieron crear el juego de **Pasapalabra** usando sólo HTML, CSS y JavaScript puro, sin ayuda de *Bootstrap*, *jQuery* u otro framework...
+copia del mítico juego de **Pasapalabra**, usando HTML, CSS y JavaScript puro, sin ayuda de *Bootstrap*, *jQuery* u otro framework...
 
 Quieres jugar? puedes comprobar lo listo que eres en el siguiente enlace:
 
