@@ -9,7 +9,7 @@ Versión del mítico juego de **Pasapalabra**, usando HTML, CSS y JavaScript pur
 
 Quieres jugar? puedes comprobar lo listo que eres en el siguiente enlace:
 
-<a href="https://mtzfactory.github.io/pasatarjeta/" target="_blank">te atreves?</a>
+[te atreves?](https://mtzfactory.github.io/pasatarjeta/)
 
 
 #### SkylabCoders Academy - Full Stack Web Development Bootcamp
