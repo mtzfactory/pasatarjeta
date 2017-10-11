@@ -1,6 +1,7 @@
-[![Skylab](https://github.com/Iggy-Codes/logo-images/blob/master/logos/skylab-56.png)](http://www.skylabcoders.com/)
-
-<a href="https://www.w3.org/"><img src="https://github.com/MarioTerron/logo-images/blob/master/logos/html5-css3-js.png" height= "56px"></a>
+[![Skylab-coders](https://mtzfactory.github.io/logos/png/skylab-coders.png)](http://www.skylabcoders.com/)
+![js](https://mtzfactory.github.io/logos/png/javascript.png)
+![html-5](https://mtzfactory.github.io/logos/png/html-5.png)
+![css-3](https://mtzfactory.github.io/logos/png/css-3.png)
 
 # [Pasatarjeta.](https://mtzfactory.github.io/pasatarjeta/)
 ## Proyecto final del pre-curso.
